@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo{
+
+    @apply inline-block font-semibold border-t-8 border-b-8 border-blue-500 rounded-md;
+
+}
+
