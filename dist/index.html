@@ -1,55 +1,117 @@
-<html lang="en">
+<html class = "scroll-smooth" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
     <title>Document</title>
 </head>
-<body class = "bg-gradient-to-b from-pink-200 via-blue-100 to-purple-200">
+<body class = "bg-gradient-to-b from-purple-200 via-blue-100 to-pink-200">
 
     <!-- Fix text centering -->
+    <main class = "h-screen ">
+        <div class = "fixed bg-purple-500 w-full h-fit shadow-lg justify-end">
 
-    <div class = "relative bg-purple-400 h-fit shadow-lg justify-end">
-
-        <div class = "logo text-4xl px-0.5 pb-1 my-2 ml-6">
-            S
-        </div>
-        <nav class = "absolute right-0 inline-block p-5">
-            <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="">
-                About this website
-            </a>
-            <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="">
-                More projects!
-            </a>
+            <div class = "logo text-4xl px-0.5 pb-1 my-2 ml-6">
+                S
+            </div>
+            <nav class = "absolute right-0 inline-block p-5">
+                <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="#About-section">
+                    About this website
+                </a>
+                <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="">
+                    More projects!
+                </a>
+        
+            </nav>
     
-        </nav>
+        </div>
+    
+        <div class = "text-center" id = "title">
+            <h1 class = "mt-40  inline-block font-semibold text-6xl">
+                My Stackwich
+            </h1>
+    
+            <div class = "text-center">
+                
+            <h2 class = "mt-14 inline-block text-5xl font-semibold border-t-8 border-b-8 pb-1 border-blue-500 rounded-md">
+                S
+            </h2>
+            </div>
 
-    </div>
-
-    <div class = "mt-24 text-center">
-        <h1 class = "inline-block font-semibold text-6xl">
-            My Stackwich
-        </h1>
-
-        <div class = "text-center">
-            
-        <h2 class = "mt-14 inline-block text-5xl font-semibold border-t-8 border-b-8 pb-1 border-blue-500 rounded-md">
-            S
-        </h2>
+            <div class = "text-center mt-24">
+                <a class = "  bg-purple-400 max-w-fit px-4 py-3 rounded-lg mx-auto shadow-md hover:cursor-pointer hover:shadow-xl" id = "Start-button" href = "#Nevin">
+                    <span class = "text-xl text-gray-800 font-semibold" id = "Button-text" >
+                        Click to create your Stackwich
+                    </span>
+                    
+                </a>
+            </div>
+    
         </div>
 
-    </div>
 
+
+
+        <div class = "pt-48 hidden flex-col mx-auto" id = "Stackwich">
+
+            <!-- Sandwich parts go here -->
+            <div class = " flex justify-center" >
+
+                <svg class = "w-8 inline-block hover:cursor-pointer" id = "left-button-bun" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                </svg>
+                <div class = "inline-block" id = "Bun">
+                    <img class = "w-40 mx-8 inline-block" src="./img/bun_one.png" alt="Burger bun">
+                </div>
+                <svg class = "w-8 inline-block hover:cursor-pointer" id = "right-button-bun" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                </svg>
+
+                <span class = "font-semibold text-2xl self-center ml-40" id = "Bun-text">
+                    React
+                </span>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+    
+    <footer class = "h-fit py-10 w-full text-center mt-16 bg-gradient-to-b from-pink-200 to-white" >
+        <h1 class = "font-semibold text-black text-3xl" id = "About-section">
+            About
+        </h1>
+        <p class = "mt-10 font text-xl max-w-4xl m-auto">
+
+            Have you ever wanted to see what your favourite tech stack would look like as a sandwich? No? Well, with Stackwich you can!
+            See what tasty and bizzare sandwiches you can create using your favourite frameworks, or try to unlock all the most popular 
+            combinations already in use by developers!
+
+        </p>
+
+        <p class = "mt-5">
+            Project by Matthew Farah :^)
+        </p>
+
+
+    </footer>   
 
     <!-- Click to make your stackwich! -->
 
-    <footer>
 
-
-    </footer>
 
 
 
     <script src="./scripts.js"></script>
+    
+
 </body>
 </html>
