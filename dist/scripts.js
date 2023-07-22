@@ -1,62 +1,81 @@
-// Should definitely clean this up
-
 // Also, consider using classes for each language to make changing colours and styles and stuff easier
 
-
-const start_button = document.querySelector("#Start-button");
-const main = document.querySelector("#Stackwich");
-const bun = document.querySelector("#Bun");
-const right_button_bun = document.querySelector("#right-button-bun");
-const left_button_bun = document.querySelector("#left-button-bun")
-const title = document.querySelector("#title")
-
-const bun_text = document.querySelector("#Bun-text")
+const stackwich = document.querySelector("#Stackwich");
+const start_menu = document.querySelector("#Title");
+const start_button = document.querySelector("button");
 
 
-let val_bun = 0;
+// Maybe try adding different bun colours
 
+const front_end_languages = [
 
-const buns = ["./img/bun_one.png", "./img/bun_two.png"]
-const buns_frameworks = ["React", "Angular"];
+    {name: "React", text_colour: "text-[#61DBFB]"},
+    {name: "Angular", text_colour: "text-[white]"},
+    {name: "Vue", text_colour: "text-[#42b883]"},
+    {name: "Svelte", text_colour: "text-[#f73f07]"}
 
-start_button.addEventListener("click", () =>{
-
-
-    start_button.setAttribute("class", "hidden");
-    main.classList.remove("hidden");
-    main.classList.add("flex");
-    title.classList.add("hidden")
+]
 
 
 
-});
 
-right_button_bun.addEventListener("click", () =>{
 
-    if((val_bun+1) < buns.length){
-        val_bun++;
-    }else{
+let bun_framework = 0;
 
-        val_bun = 0;
-    };
+// Fade out
 
-    console.log(buns[val_bun]);
-    bun.innerHTML =`<img class = "w-40 mx-8 inline-block" src = "${buns[val_bun]}">`
-    bun_text.textContent = `${buns_frameworks[val_bun]}`
-});
+start_button.parentElement.addEventListener("click", ()=>{
 
-left_button_bun.addEventListener("click", () =>{
+    // Makes menu disappear
+    start_menu.classList.add("start_menu_after")
 
-    if(val_bun > 0){
-        val_bun--;
-    }else{
+    // removes menu html content from site after menu has disappeared
+    setTimeout(()=>{
 
-        val_bun = (buns.length - 1);
-    };
-    console.log(val_bun)
+        start_menu.innerHTML = ""
+        stackwich.classList.remove("hidden")
+    }, 1500)
 
-    console.log(buns[val_bun]);
-    bun.innerHTML =`<img class = "w-40 mx-8 inline-block" src = "${buns[val_bun]}">`
-    bun_text.textContent = `${buns_frameworks[val_bun]}`
+})
 
-});
+stackwich.addEventListener("click", event=>{
+
+    const arrow = event.target;
+    const top_text = stackwich.querySelector("#Top-text")
+
+    if(arrow.id.includes("1") || arrow.parentElement.id.includes("1")){
+
+        const bun_text = document.querySelector("#Bun-text")
+
+        if(arrow.id === "rb-1"){
+
+            bun_framework += 1;
+            bun_text.textContent = `${front_end_languages[bun_framework % front_end_languages.length].name}`
+            top_text.textContent = `${front_end_languages[bun_framework % front_end_languages.length].name[0]}`
+            
+            const html = `inside-text ${front_end_languages[bun_framework % front_end_languages.length].text_colour}`
+            bun_text.setAttribute("class", `${html}`)
+
+        }else{
+
+            bun_framework -= 1; // Changes value of image every time button is clicked
+            bun_framework = bun_framework % front_end_languages.length; //Keeps value of bun_framework between 0 and -3
+            bun_framework = front_end_languages.length + bun_framework; //Adds value to length, meaning all values will be between 3 and 0
+            
+            bun_text.textContent = `${front_end_languages[bun_framework % front_end_languages.length].name}`
+            top_text.textContent = `${front_end_languages[bun_framework % front_end_languages.length].name[0]}`
+            
+            const html = `inside-text ${front_end_languages[bun_framework % front_end_languages.length].text_colour}`
+
+            bun_text.setAttribute("class", `${html}`)
+
+            
+
+        }
+
+    }
+
+})
+
+
+

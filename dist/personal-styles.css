@@ -1,0 +1,17 @@
+/* Classes to easily fade out start menu*/
+
+.start_menu_before{
+
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+
+}
+
+.start_menu_after{
+
+    opacity: 0;
+
+
+}
+
