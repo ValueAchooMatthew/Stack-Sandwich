@@ -4,21 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./personal-styles.css">
-    <title>Document</title>
+    <title>
+        My Stackwich
+    </title>
+    
 </head>
 <body class = "bg-gradient-to-b from-purple-200 via-blue-100 to-pink-200">
     <!-- Fix text centering -->
     <main class = "h-screen">
-        <div class = "fixed bg-purple-500 w-full h-fit shadow-lg justify-end">
+        <div class = "fixed bg-purple-500 w-full h-fit shadow-lg justify-end" id = "Banner">
 
-            <div class = "logo text-4xl px-0.5 pb-1 my-2 ml-6">
+            <div class = "logo text-4xl px-0.5 pb-1 my-2 ml-6 hover:cursor-pointer" id = "icon">
                 S
             </div>
             <nav class = "absolute right-0 inline-block p-5">
                 <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="#About-section">
                     About this website
                 </a>
-                <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" href="">
+                <a class = "text-base font-semibold mx-2 text-gray-100 sm:mx-10 sm:text-2xl" target = "_blank" href="https://github.com/ValueAchooMatthew?tab=repositories">
                     More projects!
                 </a>
         
@@ -26,7 +29,7 @@
     
         </div>
     
-        <div class = "text-center start_menu_before " id = "Title">
+        <div class = "text-center start_menu_before" id = "Title">
             <h1 class = "mt-40 inline-block font-semibold text-6xl">
                 My Stackwich
             </h1>
@@ -39,8 +42,8 @@
             </div>
 
             <div class = "text-center mt-24">
-                <a class = "  bg-purple-400 max-w-fit px-4 py-3 rounded-lg mx-auto shadow-md hover:cursor-pointer hover:shadow-xl" id = "Start-button">
-                    <button class = "text-xl text-gray-800 font-semibold" >
+                <a class = "bg-purple-400 max-w-fit px-4 py-3 rounded-lg mx-auto shadow-md hover:cursor-pointer hover:shadow-xl" id = "Start-button">
+                    <button class = "text-xl text-gray-800 font-semibold">
                         Click to create your Stackwich
                     </button>
                     
@@ -49,13 +52,14 @@
     
         </div>
 
-        <div class = "hidden pt-48 flex-col mx-auto " id = "Stackwich">
+        <div class = "pt-48 flex-col mx-auto hidden" id = "Stackwich">
 
-            <div class = "text-center mb-20">
+            <div class = "text-center mb-10">
                 <p class = "font-semibold text-3xl">
-                    Your Stackwich name: <span id = "Top-text">R</span><span></span>
+                    Your Stackwich name: <span id = "First-letter">R</span><span id = "Second-letter">A</span><span id = "Third-letter">D</span>
                 </p>
             </div>
+
             <!-- Sandwich parts go here -->
             <div class = "flex justify-center select-none">
             
@@ -64,7 +68,7 @@
                 </svg>
 
                 <div class = "bg-orange-500 border-2 rounded-t-full border-black py-2 w-60 text-center ">
-                    <span class = "inside-text text-[#61DBFB]" id = "Bun-text">
+                    <span class = "inside-text text-[#61DBFB]" id = "Top-bun-text">
                         React
                     </span>
                 </div>
@@ -88,57 +92,48 @@
             
             <div class = "flex justify-center select-none">
             
-                <svg class = "w-20 inline-block overflow-hidden hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class = "w-20 inline-block overflow-hidden hover:cursor-pointer px-5" id = "lb-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
                 </svg>
 
                 <div class = "my-2 bg-amber-900 border-2 rounded-lg border-black py-2 w-60 text-center">
-                    <span class = "mt-3 font-semibold text-3xl">
-                        Nevinscript
+                    <span class = "mt-3 font-semibold text-3xl text-[#FF9900]" id = "Patty-text">
+                        AWS
                     </span>
                 </div>
 
-                <svg class = "w-20 inline-block hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class = "w-20 inline-block hover:cursor-pointer px-5" id = "rb-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
                 </svg>
             
             </div>
             <div class = "flex justify-center select-none">
             
-                <svg class = "w-20 inline-block overflow-hidden hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-                </svg>
-
-                <div class = "my-2 bg-amber-900 border-2 rounded-lg border-black py-2 w-60 text-center">
-                    <span class = "mt-3 font-semibold text-3xl">
-                        Nevinscript
-                    </span>
-                </div>
-
-                <svg class = "w-20 inline-block hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                </svg>
-            
-            </div>
-            <div class = "flex justify-center select-none">
-            
-                <svg class = "w-20 inline-block overflow-hidden hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class = "w-20 inline-block overflow-hidden hover:cursor-pointer px-5" id = "lb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
                 </svg>
 
                 <div class = "my-2 bg-orange-500 border-2 rounded-b-full border-black py-2 w-60 text-center">
-                    <span class = "mt-3 font-semibold text-3xl">
-                        Nevinscript
+                    <span class = "mt-3 font-semibold text-3xl text-[#092e20]" id = "Bot-bun-text">
+                        Django
                     </span>
                 </div>
 
-                <svg class = "w-20 inline-block hover:cursor-pointer px-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg class = "w-20 inline-block hover:cursor-pointer px-5" id = "rb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
                 </svg>
             
             </div>
 
+            <div>
+                <svg class = "w-8 mx-auto mt-12 hover:cursor-pointer" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"></path>
+                  </svg>
+            </div>
+
         </div>
+
+
 
     </main>
     
@@ -157,12 +152,6 @@
         <p class = "mt-5">
             Project by Matthew Farah :^)
         </p>
-
-        <!-- Colours used so tailwind does not dispose -->
-        <div class = "bg-[#61DBFB]"></div>
-        <div class = " bg-[white]"></div>
-        <div class = " bg-[#42b883]"></div>
-        <div class = " bg-[#f73f07]"></div>
 
 
     </footer>   
