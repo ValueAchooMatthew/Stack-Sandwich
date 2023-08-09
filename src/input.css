@@ -10,7 +10,7 @@
 
 .inside-text{
 
-    @apply font-semibold text-3xl;
+    @apply font-semibold md:text-3xl text-xl;
 
 }
 
